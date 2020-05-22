@@ -1,0 +1,14 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="fadeIn">
+    <mat-grid-list cols="4" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let pokemon of arrayPokemon">
+            <app-cards [pokemonInput]='pokemon'></app-cards>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="pagination">
+        <mat-icon (click)="PaginacionLeft()">arrow_left</mat-icon>
+        <p>{{indicePaginacion}}</p>
+        <mat-icon (click)="PaginationRight()">arrow_right</mat-icon>
+    </div>
+</div>
