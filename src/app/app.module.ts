@@ -22,6 +22,8 @@ import { appRouting } from './app.routes';
 //Importacion metodo http
 import { HttpClientModule } from "@angular/common/http";
 import { GridCardsComponent } from './components/grid-cards/grid-cards.component';
+import { ChangeColorTypeDirective } from './directives/change-color-type.directive';
+import { SearchComponent } from './components/shared/search/search.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { GridCardsComponent } from './components/grid-cards/grid-cards.component
     CardsComponent,
     DescriptionPokemonComponent,
     GridCardsComponent,
+    ChangeColorTypeDirective,
+    SearchComponent,
   ],
   imports: [
     appRouting,

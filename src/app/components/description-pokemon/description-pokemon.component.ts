@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -13,8 +13,10 @@ export class DescriptionPokemonComponent implements OnInit {
 
   public pokemonRecibido: any;
   public descripcion: any;
+  public loading: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private httpClient: HttpClient) { 
+    this.loading = true;
     this.activatedRoute
     .params
     .pipe(
@@ -27,6 +29,7 @@ export class DescriptionPokemonComponent implements OnInit {
       ))
     )
     .subscribe(pokemon => {
+      this.loading = false;
       this.pokemonRecibido = pokemon;
       this.descripcion = this.pokemonRecibido.flavor_text_entries
                         .find((descripcion) => 

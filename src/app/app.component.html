@@ -1,7 +1,7 @@
 <mat-drawer-container class="container" autosize>
-    <mat-toolbar>Pokedex</mat-toolbar>
+    <mat-toolbar (click)="openSideBar=true">Pokedex</mat-toolbar>
 
-    <app-sidenav></app-sidenav>
+    <app-sidenav (cerrarSideNav)="openSideBar = $event" [abrirSideNav]="openSideBar"></app-sidenav>
 
     <div class="content">
 

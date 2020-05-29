@@ -1,4 +1,5 @@
-<mat-drawer class="example-sidenav" mode="push">
+<mat-drawer class="example-sidenav" [opened]="abrirSideNav" mode="push">
+    <mat-icon (click)="cerrarSideNavMetod()">close</mat-icon>
     <p>Auto-resizing sidenav</p>
     <p>Lorem, ipsum dolor sit amet consectetur.</p>
     <button mat-raised-button>
