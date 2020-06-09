@@ -1,1 +1,22 @@
-<p>search works!</p>
+<h3>Buscar Pokemon</h3>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Busca tu pokemon</label>
+                <input type="text" #inputSearch class="form-control" placeholder="busca tu pokemon">
+            </div>
+        </div>
+    </div>
+</div>
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="fadeIn">
+    <mat-grid-list cols="1" rowHeight="45vh">
+        <mat-grid-tile>
+            <app-cards [pokemonInput]='pokemonRecibido'></app-cards>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

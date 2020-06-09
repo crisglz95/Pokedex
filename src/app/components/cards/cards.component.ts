@@ -8,7 +8,7 @@ import { Routes, Router } from '@angular/router';
 })
 export class CardsComponent implements OnInit {
 
-  @Input() pokemonInput: Array<any>;
+  @Input() pokemonInput: any;
   
   constructor(private routes: Router) {
   }

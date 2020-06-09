@@ -24,6 +24,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { GridCardsComponent } from './components/grid-cards/grid-cards.component';
 import { ChangeColorTypeDirective } from './directives/change-color-type.directive';
 import { SearchComponent } from './components/shared/search/search.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { SearchComponent } from './components/shared/search/search.component';
     GridCardsComponent,
     ChangeColorTypeDirective,
     SearchComponent,
+    AboutUsComponent,
   ],
   imports: [
     appRouting,
